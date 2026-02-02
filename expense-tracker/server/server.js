@@ -9,7 +9,7 @@ dotenv.config({ path: './config/config.env' });
 
 connectDB();
 
-const transactions = require('./config/controllers/routes/transactions');
+const transactions = require('./controllers/routes/transactions');
 
 const app = express();
 
