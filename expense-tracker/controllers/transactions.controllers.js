@@ -59,7 +59,7 @@ exports.deleteTransactions = async (req, res, next) => {
     }
 
     await transaction.deleteOne();
-    console.log('Deleted', res);
+    console.log('Deleted transaction:', transaction._id);
     return res.status(200).json({
       success: true,
       data: {}
