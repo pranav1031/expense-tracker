@@ -1,4 +1,4 @@
-const Transaction = require('../models/transactions.model')
+const Transaction = require('../../../models/transactions.model')
 
 
 exports.getTransactions = async (req, res, next) => {
