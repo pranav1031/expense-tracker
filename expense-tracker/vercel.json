@@ -1,16 +1,24 @@
 {
   "version": 2,
-  "functions": {
-    "server.js": {
-      "includeFiles": [
-        "client/dist/**"
-      ]
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "../client/dist/**"
+        ]
+      }
     }
-  },
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/server.js"
+      "destination": "/api/index.js"
     }
   ]
 }
